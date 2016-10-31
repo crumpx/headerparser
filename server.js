@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var port = process.env.PORT || 8080
 
 app.enable('trust proxy');
 
@@ -12,6 +13,6 @@ app.get('/', function(req, res){
 	res.send(JSON.stringify(result));
 });
 
-app.listen(8080, function(){
-	console.log('Example app listening on port 8080!');
+app.listen(port, function(){
+	console.log('Running');
 })
